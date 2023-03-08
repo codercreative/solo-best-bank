@@ -1,41 +1,28 @@
-# Title
+# Scrimba Bootcamp Solo Project
 
-## Table of Contents
+## Screenshot
 
-- [Overview](#overview)
-  - [Screenshot](#screenshot)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-- [Author](#author)
+![BestBank](./assets/bestbank.png)
 
-## Introduction
+## Project Requirements
 
-- What the application does
-- Technologies used
-- Some of the challenges
+Build the project from scratch
+Follow Scrimba's Figma design and use:
 
-### Screenshot
+- Semantic HTML
+- Hover
+- Container
+- Group Selectors
+- Compound Selectors
 
-![Image here...](./images/screen-shot.png)
+## What I learned
 
-## My Process
-
-### Built with
-
-- Semantic HTML5 markup
-- CSS custom properties
-
-### What I learned
-
-Used the following code in order to...
+Added `text-shadow` instead of `bold` in order to avoid any jitter when hovering on the nav titles:
 
 ```css
-
+li:hover,
+li:focus {
+  text-decoration: underline;
+  text-shadow: 0 0 0.01px var(--black);
+}
 ```
-
-## 🙏 Acknowledgements
-
-## Author:
-
-Christina [@codercreative](https://github.com/codercreative)

@@ -1,24 +1,174 @@
-/****** VARIABLES ******/
+/*/FONT*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
 :root {
   /*COLORS*/
+  --black: #000000;
+  --grey: #343a40;
+  --white: #ffffff;
+  --orange: #ffd18c;
+  --dark-orange: #ffa724;
+  --bg-color: #f5f5f5;
 
-  /*BORDER RADIUS*/
-  --br-soft: 1rem;
-  --br-round: 50%;
-
-  /*FONT SIZES*/
-  --fs-standard: 1rem;
-  --fs-m: 1.5rem;
-  --fs-l: 2.25rem;
+  /******* BORDER RADIUS *******/
+  --br-light: 1.1rem;
+  --br-mid: 1.5rem;
 }
-
-/****** MARGIN AND PADDING RESET ******/
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 /******* GLOBAL STYLES *******/
+
+html,
+body {
+  background-color: var(--bg-color);
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 25em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  width: 17em;
+  padding: 2.5em 0;
+  display: block;
+  margin: 0 auto;
+}
+
+/******* NAVIGATION *******/
+
+.nav {
+  background-color: var(--orange);
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 1.25em;
+}
+
+li {
+  cursor: pointer;
+  margin: 0 0.94em;
+}
+
+li a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+li:hover,
+li:focus {
+  text-decoration: underline;
+  /* Added text-shadow instead of bold in order to avoid jitter, but now the text looks fuzzy */
+  text-shadow: 0 0 0.01px var(--grey);
+}
+
+.home {
+  font-weight: 700;
+}
+
+/******* BUTTONS *******/
+
+.btn {
+  display: inline-block;
+  /* making the buttons the same width */
+  min-width: 10em;
+  padding: 0.625em 1.25em;
+  border-radius: var(--br-mid);
+  border: 3px solid var(--dark-orange);
+  text-decoration: none;
+  margin: 1.5em 0;
+  color: var(--black);
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  padding: 0.625em 1.25em;
+  background-color: var(--orange);
+  transform: scale(1.02);
+}
+
+.transfer-btn {
+  margin-left: 1em;
+}
+
+/******* ACCOUNTS SECTION *******/
+
+h1 {
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+p {
+  font-weight: 700;
+}
+.main-account,
+.expenses,
+.savings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid var(--dark-orange);
+  border-radius: var(--br-light);
+  margin: 0.625em 0;
+  padding: 1.25em 0.635em;
+  transition: all 0.4s;
+}
+
+.main-account:hover,
+.expenses:hover,
+.savings:hover,
+.main-account:focus,
+.expenses:focus,
+.savings:focus {
+  background-color: var(--orange);
+}
+
+/******* MEDIA QUERY *******/
+
+@media (max-width: 34em) {
+  .container {
+    width: 17.5em;
+  }
+
+  .logo {
+    width: 12em;
+  }
+  ul {
+    flex-direction: column;
+    gap: 0.625em;
+  }
+
+  .cta-section {
+    margin: 1.5em 0;
+  }
+
+  .btn {
+    margin: 0.5em 0;
+  }
+
+  .transfer-btn {
+    margin-left: 0;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+}
