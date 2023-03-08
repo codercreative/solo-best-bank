@@ -6,8 +6,7 @@
 
 ## Project Requirements
 
-Build the project from scratch
-Follow Scrimba's Figma design and use:
+Build the project from scratch and follow Scrimba's Figma design and use:
 
 - Semantic HTML
 - Hover
