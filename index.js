@@ -1,7 +1,3 @@
-"use strict";
-// cannot use undeclared variables
-
-/****** VARIABLES ******/
 const accounts = [
   {
     id: 1,
@@ -56,6 +52,10 @@ const accounts = [
     spendings: [],
   },
 ];
-/****** FUNCTIONS ******/
 
-/****** EVENT LISTENERS ******/
+/****** VARIABLES ******/
+const total = document.querySelectorAll(".total");
+
+for (let [index, item] of accounts.entries()) {
+  total[index].innerHTML = `$${item.balance}`;
+}

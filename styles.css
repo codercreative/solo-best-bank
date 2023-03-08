@@ -22,6 +22,10 @@
 }
 /******* GLOBAL STYLES *******/
 
+/* * {
+  outline: 2px dotted green;
+} */
+
 html,
 body {
   background-color: var(--bg-color);
@@ -105,6 +109,16 @@ li:focus {
 }
 
 /******* ACCOUNTS SECTION *******/
+
+.accounts-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.accounts-section {
+  min-width: 20em;
+}
 
 h1 {
   font-size: 1.5rem;
